@@ -10,7 +10,7 @@ const Banner = () => {
   const [trailerURL, setTrailerURL] = useState("");
   useEffect(() => {
     async function fetchData() {
-      const req = await axios.get(fetchURL.fetchNetflixOriginals);
+      const req = await axios.get(fetchURL.fetchTopRated);
       setMovies(
         req.data.results[
           Math.floor(Math.random() * (req.data.results.length - 1))
